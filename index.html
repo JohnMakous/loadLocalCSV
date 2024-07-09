@@ -29,7 +29,6 @@ from js import document
 from io import BytesIO
 import pandas as pd
 import matplotlib.pyplot as plt
-import sys
 import numpy as np
 from pyscript import display
 from pyscript import when
@@ -45,30 +44,12 @@ async def processFile(*args):
 	
 	# Read the CSV file into a Pandas DataFrame
 	df = pd.read_csv(csv_file)
-	#df = pd.read_csv(csv_file,
-	#				 names=['Frequency', 'Signal'])
-	#plot()
-	#df.plot(kind = 'scatter', x = 'Frequency', y = 'Signal')
-	#plt.show()
-	display(df, target='graph')
-
-	#plt.savefig(sys.stdout.buffer)
-	#sys.stdout.flush()
+	display(df)  #, target='graph'
 	
 	dataArray = df.to_numpy()
 	x = dataArray[:,0]
 	y = dataArray[:,1]
 	print(dataArray)
-	
-	fig1, ax1 = plt.subplots(1, dpi=150, figsize=(6,4))
-	ax1.scatter(x, y, 10)
-	plt.title("Signal vs. Frequency", fontsize=6)
-	plt.xlabel("Frequency", fontsize=6)  
-	plt.ylabel("Signal", fontsize=6)
-	
-	plt.close('all')
-	
-	#display(fig1, target='graph')
 
 </py-script>
 
