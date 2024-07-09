@@ -38,6 +38,7 @@
 
         # Read the CSV file into a Pandas DataFrame
         df = pd.read_csv(csv_file)
+	print(df)
 
         # Convert each row to a list and store them in an array
         rows_array = df.values.tolist()
