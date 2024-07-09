@@ -59,6 +59,7 @@ async def processFile(*args):
 	fig1, ax1 = plt.subplots(1, figsize=(8,6))
 	x = dataArray[:,0]
 	y = dataArray[:,1]
+	ax1.scatter(x, y)
 	plt.title("Signal vs. Frequency", fontsize=6)
 	plt.xlabel("Frequency", fontsize=6)  
 	plt.ylabel("Signal", fontsize=6)
