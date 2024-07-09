@@ -40,6 +40,8 @@
 		df = pd.read_csv(csv_file)
 		dataArray = df.to_numpy()
 		print(dataArray)
+		df.plot()
+		plt.show()
 		
 		# Convert each row to a list and store them in an array
 		rows_array = df.values.tolist()
