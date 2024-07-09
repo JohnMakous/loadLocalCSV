@@ -50,7 +50,9 @@ async def processFile(*args):
 	#plt.show()
 	
 	fig1, ax1 = plt.subplots(1, dpi=150, figsize=(3,2.5))
-	ax1.scatter(dataArray)
+	x = dataArray[:,0]
+	y = dataArray[:,1]
+	ax1.scatter(x,y)
 	#plt.title(y_label + " vs. "+ x_label, fontsize=6)
 	#plt.xlabel(x_label, fontsize=6)  
 	#plt.ylabel(y_label, fontsize=6)
