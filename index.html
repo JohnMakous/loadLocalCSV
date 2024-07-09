@@ -45,7 +45,7 @@ async def processFile(*args):
 	# Read the CSV file into a Pandas DataFrame
 	df = pd.read_csv(csv_file)
 	#df = pd.read_csv(csv_file,
-					 names=['Frequency', 'Signal'])
+	#				 names=['Frequency', 'Signal'])
 	df.plot()
 	#df.plot(kind = 'scatter', x = 'Frequency', y = 'Signal')
 	plt.show()
