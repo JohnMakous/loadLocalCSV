@@ -44,7 +44,7 @@ async def processFile(*args):
 	
 	# Read the CSV file into a Pandas DataFrame
 	df = pd.read_csv(csv_file)
-	display(df)  #, target='graph'
+	#display(df)  #, target='graph'
 	
 	dataArray = df.to_numpy()
 	x = dataArray[:,0]
